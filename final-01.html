@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; /* Base font size for rem calculations */
+}
+
+/* Full-Width Wrapper for Product 5 */
+.full-width-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem; /* 20px */
+    padding: 0.625rem; /* 10px */
+}
+
+.full-width {
+    width: 100%;
+    max-width: 75%; /* 1200px is 75% of 1600px */
+    text-align: left;
+}
+
+.full-width h2,
+.full-width p {
+    text-align: left;
+}
+
+.full-width img {
+    width: 100%;
+    height: auto;
+}
+
+.full-width p {
+    padding: 1.25%; /* 15px */
+    background: #f4f4f4;
+}
+
+/* Container for Two Columns (Matches Product 5 Width) */
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25%; /* 15px */
+    max-width: 75%; /* 1200px */
+    margin: auto;
+    padding: 1.25% 0; /* 20px 0 */
+    flex-wrap: wrap;
+}
+
+/* Columns */
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25%; /* 15px */
+    min-width: 17.5rem; /* 280px */
+}
+
+/* Product Card */
+.card {
+    background-color: #f4f4f4;
+    padding: 1.25%; /* 15px */
+    text-align: left;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    padding-top: 0.625rem; /* 10px */
+}
+
+/* Full-Width Image */
+.card .sm-img {
+    width: 100%;
+    height: auto;
+}
+
+.header-top {
+    width: 100%;
+    min-height: 7.1875rem; /* 115px */
+    background-color: #da2c01;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3125rem; /* 5px */
+}
+
+.logo img {
+    width: 20.6875rem; /* 330px */
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.heading-2 {
+    font-size: 3.125rem; /* 50px */
+    text-transform: uppercase;
+    margin-bottom: 0.625rem; /* 10px */
+}
+.heading-3 {
+    font-size: 2.125rem; 
+    text-transform: uppercase;
+    margin-bottom: 0.625rem; 
+}
+.desc {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 500;
+}
+
+.large-img {
+    width: 100%;
+    max-height: 62.4375rem; /* 998px */
+    height: auto;
+    aspect-ratio: 998 / 998;
+}
+
+.large-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.card .sm-img {
+    width: 100%;
+    max-height: 21.875rem; /* 350px */
+    height: auto;
+    aspect-ratio: 350 / 350;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Adjustments */
+@media all and (max-width: 75%) { /* 1200px */
+    .heading-2 {
+        font-size: 3rem; /* 48px */
+    }
+
+    .desc {
+        font-size: 2rem; /* 32px */
+    }
+
+    .logo img {
+        width: 18.75rem; /* 300px */
+    }
+
+    .large-img {
+        max-height: 56.25rem; /* 900px */
+    }
+}
+
+@media all and (max-width: 64%) { /* 1024px */
+    .heading-2 {
+        font-size: 2.625rem; /* 42px */
+    }
+
+    .desc {
+        font-size: 1.75rem; /* 28px */
+    }
+
+    .logo img {
+        width: 17.5rem; /* 280px */
+    }
+
+    .large-img {
+        max-height: 53.125rem; /* 850px */
+    }
+}
+
+@media all and (max-width: 60.25%) { /* 964px */
+    .heading-2 {
+        font-size: 2.25rem; /* 36px */
+    }
+
+    .desc {
+        font-size: 1.625rem; /* 26px */
+    }
+
+    .logo img {
+        width: 16.25rem; /* 260px */
+    }
+
+    .large-img {
+        max-height: 50rem; /* 800px */
+    }
+}
+
+@media all and (max-width: 48%) { /* 768px */
+    .heading-2 {
+        font-size: 2rem; /* 32px */
+    }
+
+    .desc {
+        font-size: 1.375rem; /* 22px */
+    }
+
+    .logo img {
+        width: 15rem; /* 240px */
+    }
+
+    .large-img {
+        max-height: 46.875rem; /* 750px */
+    }
+}
+
+@media all and (max-width: 40.625%) { /* 650px */
+    .container {
+        flex-direction: column;
+        gap: 0.625rem; /* 10px */
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .card {
+        padding: 0.625rem; /* 10px */
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .logo img {
+        width: 13.75rem; /* 220px */
+    }
+
+    .heading-2 {
+        font-size: 1.75rem; /* 28px */
+    }
+
+    .desc {
+        font-size: 1.25rem; /* 20px */
+    }
+
+    .large-img {
+        max-height: 43.75rem; /* 700px */
+    }
+}
+
+@media all and (max-width: 30%) { /* 480px */
+    .heading-2 {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .desc {
+        font-size: 1.125rem; /* 18px */
+    }
+
+    .logo img {
+        width: 12.5rem; /* 200px */
+    }
+
+    .large-img {
+        max-height: 40.625rem; /* 650px */
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- Product 1 (Top) -->
+    <div class="full-width-container header-top">
+        <div class="full-width">
+            <div class="logo">
+                <img src="" alt="Logo">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="full-width-container">
+        <div class="full-width">
+
+            
+            <div class="large-img">
+                <img src="https://picsum.photos/800/400?random=2">
+            </div>
+            
+                        <h2 class="heading-2">Image Product 2
+
+            </h2>
+            <h3 class="heading-3">Product subheading aaaaaaaa
+
+            </h3>
+            <p class="desc">
+                This is Product 1. It contains important information about the product and its features. 
+                    This product is one of the best sellers in the market. It offers high durability, excellent performance, 
+                    and a sleek design that fits into any modern environment. Customers appreciate the reliability of 
+                    this product as it consistently delivers top-notch results. It has been tested and approved by industry 
+                    professionals to ensure quality standards are met.<br><br>
+
+            </p>
+        </div>
+    </div>
+
+
+
+    <!-- Aligned Two-Column Container -->
+    <div class="container">
+        <!-- Column 1 -->
+        <div class="column">
+            <!-- Product 3 -->
+            <div class="card">
+                <h2 class="heading-2">Image Product 3
+
+                </h2>
+
+                <div class="sm-img">
+                    <img src="https://picsum.photos/800/400?random=3">
+                </div>
+
+                <p class="desc">
+                  This is Product 1. It contains important information about the product and its features. 
+                    This product is one of the best sellers in the market. It offers high durability, excellent performance, 
+                    and a sleek design that fits into any modern environment. Customers appreciate the reliability of 
+                    this product as it consistently delivers top-notch results. It has been tested and approved by industry 
+                    professionals to ensure quality standards are met.<br><br>
+
+                </p>
+
+            </div>
+            <div class="card">
+                <h2 class="heading-2">Image Product 3
+
+                </h2>
+                <div class="sm-img">
+                    <img src="https://picsum.photos/800/400?random=4">
+                </div>
+                <p class="desc">
+   This is Product 1. It contains important information about the product and its features. 
+                    This product is one of the best sellers in the market. It offers high durability, excellent performance, 
+                    and a sleek design that fits into any modern environment. Customers appreciate the reliability of 
+                    this product as it consistently delivers top-notch results. It has been tested and approved by industry 
+                    professionals to ensure quality standards are met.<br><br>
+
+                </p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="card">
+                <h2 class="heading-2">Image Product 3
+
+                </h2>
+                <div class="sm-img">
+                    <img src="https://picsum.photos/800/400?random=5">
+                </div>
+                <p class="desc">
+                    
+                    Product 1 is crafted using premium materials, ensuring long-term usability. It includes a wide range of 
+                    features tailored for various user needs. With an innovative approach to design, it stands out as a leading 
+                    choice in its category. The product also incorporates energy-efficient technology, helping users save on 
+                    power consumption while maintaining efficiency.<br><br>
+
+                    Additionally, Product 1 has received numerous positive reviews from satisfied customers. Many highlight its 
+                    user-friendly nature, ease of maintenance, and impressive warranty options. Whether for personal or 
+                    professional use, this product is designed to cater to different needs, making it a valuable investment.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Column 2 -->
+        <div class="column">
+            <!-- Product 3 -->
+            <div class="card">
+                <h2 class="heading-2">Image Product 3
+
+                </h2>
+                <div class="sm-img">
+                    <img src="https://picsum.photos/800/400?random=6">
+                </div>
+                <p class="desc">
+                    
+                    Product 1 is crafted using premium materials, ensuring long-term usability. It includes a wide range of 
+                    features tailored for various user needs. With an innovative approach to design, it stands out as a leading 
+                    choice in its category. The product also incorporates energy-efficient technology, helping users save on 
+                    power consumption while maintaining efficiency.<br><br>
+
+                    Additionally, Product 1 has received numerous positive reviews from satisfied customers. Many highlight its 
+                    user-friendly nature, ease of maintenance, and impressive warranty options. Whether for personal or 
+                    professional use, this product is designed to cater to different needs, making it a valuable investment.
+                </p>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="card">
+                <h2 class="heading-2">Image Product 3
+
+                </h2>
+                <div class="sm-img">
+                    <img src="https://picsum.photos/800/400?random=7">
+                </div>
+                <p class="desc">
+                    
+                    Product 1 is crafted using premium materials, ensuring long-term usability. It includes a wide range of 
+                    features tailored for various user needs. With an innovative approach to design, it stands out as a leading 
+                    choice in its category. The product also incorporates energy-efficient technology, helping users save on 
+                    power consumption while maintaining efficiency.<br><br>
+
+                    Additionally, Product 1 has received numerous positive reviews from satisfied customers. Many highlight its 
+                    user-friendly nature, ease of maintenance, and impressive warranty options. Whether for personal or 
+                    professional use, this product is designed to cater to different needs, making it a valuable investment.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2 class="heading-2">Image Product 3
+
+                </h2>
+                <div class="sm-img">
+                    <img src="https://picsum.photos/800/400?random=8">
+                </div>
+                <p class="desc">
+                    
+                    Product 1 is crafted using premium materials, ensuring long-term usability. It includes a wide range of 
+                    features tailored for various user needs. With an innovative approach to design, it stands out as a leading 
+                    choice in its category. The product also incorporates energy-efficient technology, helping users save on 
+                    power consumption while maintaining efficiency.<br><br>
+
+                    Additionally, Product 1 has received numerous positive reviews from satisfied customers. Many highlight its 
+                    user-friendly nature, ease of maintenance, and impressive warranty options. Whether for personal or 
+                    professional use, this product is designed to cater to different needs, making it a valuable investment.
+                </p>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="card">
+                <h2 class="heading-2">Image Product 3
+
+                </h2>
+                <div class="sm-img">
+                    <img src="https://picsum.photos/800/400?random=9">
+                </div>
+                <p class="desc">
+                    
+                    Product 1 is crafted using premium materials, ensuring long-term usability. It includes a wide range of 
+                    features tailored for various user needs. With an innovative approach to design, it stands out as a leading 
+                    choice in its category. The product also incorporates energy-efficient technology, helping users save on 
+                    power consumption while maintaining efficiency.<br><br>
+
+                    Additionally, Product 1 has received numerous positive reviews from satisfied customers. Many highlight its 
+                    user-friendly nature, ease of maintenance, and impressive warranty options. Whether for personal or 
+                    professional use, this product is designed to cater to different needs, making it a valuable investment.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product 5 (Bottom) -->
+    <div class="full-width-container">
+        <div class="full-width">
+            <h2 class="heading-2">Image Product 3
+
+            </h2>
+            <div class="large-img">
+                <img src="https://picsum.photos/800/400?random=10">
+            </div>
+            <p class="desc">
+                
+                    Product 1 is crafted using premium materials, ensuring long-term usability. It includes a wide range of 
+                    features tailored for various user needs. With an innovative approach to design, it stands out as a leading 
+                    choice in its category. The product also incorporates energy-efficient technology, helping users save on 
+                    power consumption while maintaining efficiency.<br><br>
+
+                    Additionally, Product 1 has received numerous positive reviews from satisfied customers. Many highlight its 
+                    user-friendly nature, ease of maintenance, and impressive warranty options. Whether for personal or 
+                    professional use, this product is designed to cater to different needs, making it a valuable investment.
+            </p>
+        </div>
+    </div>
+    <div class="full-width-container">
+        <div class="full-width">
+            <h2 class="heading-2">Image Product 3
+
+            </h2>
+            <div class="large-img">
+                <img src="https://picsum.photos/800/400?random=11">
+            </div>
+            <p class="desc">
+                
+                    Product 1 is crafted using premium materials, ensuring long-term usability. It includes a wide range of 
+                    features tailored for various user needs. With an innovative approach to design, it stands out as a leading 
+                    choice in its category. The product also incorporates energy-efficient technology, helping users save on 
+                    power consumption while maintaining efficiency.<br><br>
+
+                    Additionally, Product 1 has received numerous positive reviews from satisfied customers. Many highlight its 
+                    user-friendly nature, ease of maintenance, and impressive warranty options. Whether for personal or 
+                    professional use, this product is designed to cater to different needs, making it a valuable investment.
+            </p>
+        </div>
+    </div>
+
+    <div class="full-width-container">
+        <div class="full-width">
+            <h2 class="heading-2">Image Product 3
+
+            </h2>
+            <div class="large-img">
+                <img src="https://picsum.photos/800/400?random=12">
+            </div>
+            <p class="desc">
+                
+                    Product 1 is crafted using premium materials, ensuring long-term usability. It includes a wide range of 
+                    features tailored for various user needs. With an innovative approach to design, it stands out as a leading 
+                    choice in its category. The product also incorporates energy-efficient technology, helping users save on 
+                    power consumption while maintaining efficiency.<br><br>
+
+                    Additionally, Product 1 has received numerous positive reviews from satisfied customers. Many highlight its 
+                    user-friendly nature, ease of maintenance, and impressive warranty options. Whether for personal or 
+                    professional use, this product is designed to cater to different needs, making it a valuable investment.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
