@@ -217,6 +217,24 @@
       width: 100%;
       height: 100%;
     }
+/* STRIPED */
+    .striped-list li:nth-child(odd) {
+    background-color: #f4f4f4;
+    }
+
+    .striped-list li:nth-child(even) {
+      background-color: #e0e0e0; /* Lighter gray for even items */
+    }
+    
+    .striped-section p:nth-child(odd) {
+      background-color: #f4f4f4;
+      padding: 1rem;
+    }
+    
+    .striped-section p:nth-child(even) {
+      background-color: #e0e0e0;
+      padding: 1rem;
+    }
 
     /* Medium desktops - 1024px */
     @media all and (max-width: 102.4rem) {
@@ -343,13 +361,11 @@
         </p>
         <p>
         <br>
-          This is Product 1. It contains important information about the
-          product and its features. This product is one of the best sellers in
-          the market. It offers high durability, excellent performance, and a
-          sleek design that fits into any modern environment. Customers
-          appreciate the reliability of this product as it consistently
-          delivers top-notch results. It has been tested and approved by
-          industry professionals to ensure quality standards are met.
+        <div class="striped-section">
+          <p><strong>Striped Feature 1:</strong> A reliable and cost-effective solution for everyday use.</p>
+          <p><strong>Striped Feature 2:</strong> Designed to last, with enhanced durability for daily wear.</p>
+          <p><strong>Striped Feature 3:</strong> Aesthetic design that complements modern environments.</p>
+        </div>
         <br>
         <br>
           This is Product 1. It contains important information about the
@@ -359,6 +375,16 @@
           appreciate the reliability of this product as it consistently
           delivers top-notch results. It has been tested and approved by
           industry professionals to ensure quality standards are met.
+        </p>
+        <p>
+          <ul class="striped-list">
+        <li>Striped list High durability and excellent performance</li>
+        <li>Striped list Energy-efficient technology</li>
+        <li>Striped list Premium materials for long-term usability</li>
+        <li>Striped list User-friendly and easy to maintain</li>
+        <li>Striped List Impressive warranty options</li>
+        </ul>
+    <br>
         </p>
       </div>
     </div>
