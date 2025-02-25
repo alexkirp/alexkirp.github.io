@@ -1,0 +1,339 @@
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independent Vertical Positioning</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+
+        /* Full-Width Wrapper for Product 5 */
+        .full-width-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .full-width {
+            width: 100%;
+            max-width: 1200px; /* Ensures alignment */
+            text-align: left;
+        }
+
+        .full-width h2, .full-width p {
+            text-align: left;
+            margin: 0 0 10px 0;
+        }
+
+        .full-width img {
+            width: 100%;
+            height: auto;
+        }
+
+        .full-width p {
+            padding: 15px;
+            background: #f4f4f4;
+        }
+
+        /* Container for Two Columns (Matches Product 5 Width) */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1200px; /* Aligned with Product 5 */
+            margin: auto;
+            padding: 20px 0; /* Consistent spacing */
+            flex-wrap: wrap;
+        }
+
+        /* Columns */
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-width: 280px;
+        }
+
+        /* Product Card */
+ /* Product Card */
+        .card {
+            background-color: #f4f4f4;
+            padding: 15px;
+            text-align: left; /* Left-justify text */
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .card p {
+            margin: 10px 0;
+        }
+
+        /* Full-Width Image */
+        .card img {
+            width: 100%; /* No padding on sides */
+            height: auto;
+        }
+
+ .logo
+        {
+            width: 100%;
+            height: 300px;
+            background-color: aqua;
+        }
+        /* Mobile: Force Single-Column Layout */
+       @media all and (max-width: 650px) {
+            .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .column {
+                width: 100%;
+            }
+            .logo         
+            {
+               width: 100%;
+               height: 120px;
+               background-color: red;
+            }
+        }
+       /* For screens between 300px and 600px */
+@media all and (min-width: 300px) and (max-width: 600px) {
+ .logo         
+            {
+    width: calc(100% - 10px);
+    background-color: blue;
+		  }
+}
+
+/* For screens between 601px and 767px */
+@media all and (min-width: 601px) and (max-width: 767px) {
+	 .logo         
+            {
+   background-color: green;
+    width: calc(100% - 10px);
+	  }
+}
+
+/* For screens between 768px and 810px */
+@media all and (min-width: 768px) and (max-width: 810px) {
+    .logo         
+            {
+
+   background-color: magenta;
+    width: calc(45% - 10px);
+	  }
+}
+
+/* For screens between 811px and 999px */
+@media all and (min-width: 811px) and (max-width: 999px) {
+ .logo         
+    {
+
+    width: calc(33.33% - 10px);
+   background-color: yellow;
+   }
+}
+
+/* For screens between 1000px and 1371px */
+@media all and (min-width: 1000px) and (max-width: 1371px) {
+ .logo         
+            {
+
+    width: calc(25% - 10px);
+   background-color: brown;
+	   }
+}
+
+/* For screens 1280px and above */
+@media (min-width: 1280px) {
+ .logo         
+            {
+
+ background-color: red;
+  
+}
+}
+
+/* For screens between 1440px and 1679px */
+@media all and (min-width: 1440px) and (max-width: 1679px) {
+	 .logo         
+            {
+
+ background-color: green;
+	 }
+}
+      
+        
+    </style>
+
+
+
+    <!-- Product 1 (Top) -->
+<div class="full-width-container">
+        <div class="full-width">
+            <div class="logo">
+            </div>  
+        </div>
+    </div>
+
+
+<div class="full-width-container">
+        <div class="full-width">
+            <h2>Image Product 2
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=2">            
+             <p>
+                b
+            </p>
+        </div>
+    </div>
+
+
+
+    <!-- Aligned Two-Column Container -->
+    <div class="container">
+        <!-- Column 1 -->
+        <div class="column">
+            <!-- Product 3 -->
+            <div class="card">
+                <h2>Image Product 3
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=3">            
+             <p>
+                c
+            </p>
+                
+            </div>
+            <div class="card">
+                <h2>Image Product 3
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=4">            
+             <p>
+                d
+            </p>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="card">
+                <h2>Image Product 3
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=5">            
+             <p>
+                e
+            </p>
+            </div>
+        </div>
+        
+
+        <!-- Column 2 -->
+        <div class="column">
+            <!-- Product 3 -->
+            <div class="card">
+                <h2>Image Product 3
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=6">            
+             <p>
+                r
+            </p>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="card">
+                <h2>Image Product 3
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=7">            
+             <p>
+                g
+            </p>
+            </div>
+            
+            <div class="card">
+                <h2>Image Product 3
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=8">            
+             <p>
+                g
+            </p>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="card">
+                <h2>Image Product 3
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=9">            
+             <p>
+                h
+            </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product 5 (Bottom) -->
+    <div class="full-width-container">
+        <div class="full-width">
+            <h2>Image Product 3
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=10">            
+             <p>
+                d
+            </p>
+        </div>
+    </div>
+    <div class="full-width-container">
+        <div class="full-width">
+            <h2>Image Product 3
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=11">            
+             <p>
+                w
+            </p>
+        </div>
+    </div>
+
+<div class="full-width-container">
+        <div class="full-width">
+            <h2>Image Product 3
+	        
+            </h2>
+                
+                <img src="https://picsum.photos/800/400?random=12">            
+             <p>
+                dd
+            </p>
+        </div>
+    </div>
+
+
+
