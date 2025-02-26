@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    html {
+      font-size: 62.5%;
+      /* 1rem = 10px */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 1.6rem;
+      line-height: 1.6;
+      /* Adjust based on Fiverr's layout */
+    }
+
+    /* Container for center the content in body */
+    .container {
+      max-width: 120rem;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 4rem;
+      /* 40px */
+      font-weight: 700;
+      margin: 1rem 0;
+    }
+
+
+    h2 {
+      font-size: 3.2rem;
+      /* 32px */
+      font-weight: 700;
+      margin: 1rem 0;
+    }
+
+
+    h3 {
+      font-size: 2.8rem;
+      /* 28px */
+    }
+
+
+    h4 {
+      font-size: 2.4rem;
+      /* 24px */
+    }
+
+
+    h5 {
+      font-size: 2rem;
+      /* 20px */
+      margin-bottom: 0.625rem;
+    }
+
+
+    h6 {
+      font-size: 1.6rem;
+      /* 16px */
+
+      margin-bottom: 0.625rem;
+    }
+
+
+    p {
+      font-size: 1.6rem;
+      /* 16px */
+      font-weight: 400;
+    }
+
+    .text-uppercase {
+      text-transform: uppercase;
+    }
+    /* row */
+    .row {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+
+    /* Product Card - this will keep the product 50% of the full width( that means 50% left and 50% right) */ 
+    .card {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      flex: 0 0 auto;
+    width: 47%;
+    }
+
+    .product-header {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .header-top {
+      width: 100%;
+      min-height: 20vh;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      padding: 2.5rem;
+    }
+
+    .logo {
+      margin: 1rem 0;
+    }
+    .desc {
+      font-size: 1.6rem;
+      padding: 1.3rem;
+      font-weight: 500;
+      background: white;
+    }
+
+    .desc p {
+      margin: 1rem 0;
+    }
+
+    .desc p:first-child {
+      margin-top: 0;
+    }
+
+    .desc p:last-child {
+      margin-bottom: 0;
+    }
+
+    .large-img {
+      width: 100%;
+      max-height: 99.8rem;
+      /* 998px */
+      height: auto;
+      aspect-ratio: 998 / 998;
+    }
+
+    .large-img img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .card .sm-img {
+      width: 100%;
+      max-height: 35rem;
+      /* 350px */
+      height: auto;
+      aspect-ratio: 350 / 350;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* STRIPED */
+    .striped-list li:nth-child(odd) {
+      background-color: #ffffff;
+      list-style-type: none;
+    }
+
+    .striped-list li:nth-child(even) {
+      background-color: #E8F5F1;
+      /* Lighter green for even items */
+      list-style-type: none;
+    }
+
+    .striped-section p:nth-child(odd) {
+      background-color: #E8F5F1;
+      padding: 1rem;
+      list-style-type: none;
+    }
+
+    .striped-section p:nth-child(even) {
+      background-color: #E8F5F1;
+      padding: 1rem;
+      list-style-type: none;
+    }
+
+    /* Medium desktops - 1024px */
+    @media all and (max-width: 1024px) {
+
+      /* 1024px */
+      html {
+        font-size: 58%;
+       
+      }
+
+
+    }
+
+    /* Laptops & smaller desktops - 964px */
+    @media all and (max-width: 964px) {
+
+      /* 964px */
+      html {
+        font-size: 58%;
+      }
+
+    }
+
+    /* Tablets - 768px */
+    @media all and (max-width: 768px) {
+
+      /* 768px */
+      html {
+        font-size: 56%;
+      }
+
+    }
+
+    /* Small tablets - 650px */
+    @media all and (max-width: 650px) {
+
+      /* 650px */
+      html {
+        font-size: 55%    
+      }
+
+      .row {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 100%;
+      }
+
+      .logo-container {
+        text-align: center;
+      }
+
+      .header-img-1 {
+        display: none;
+      }
+      .order-sm-1 {
+        order: 1;
+      }
+      .order-sm-2 {
+        order: 2;
+      }
+      .order-sm-3 {
+        order: 3;
+      }
+      .order-sm-4 {
+        order: 4;
+      }
+    }
+
+    /* Mobile screens - 480px */
+    @media all and (max-width: 480px) {
+
+      /* 480px */
+      html {
+        font-size: 50%;
+      }
+
+      .content {
+        padding: 0.5rem;
+      }
+
+      .logo {
+    
+    width: 24rem;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Product 1 (Top) -->
+  <div class="container">
+    <div class="header-top">
+      <div class="logo-container">
+        <div><img src="https://alexkirp.github.io/header_top.png" alt="Header" loading="lazy" class="header-img-1"/> </div>
+        <div><img src="https://alexkirp.github.io/edisons_logo-transparent.png" alt="Logo" loading="lazy" width="300" class="logo" /> </div>
+        <div><img src="https://alexkirp.github.io/aus-post-free-delivery.jpg" alt="Free-delivery" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="large-img">
+      <img src="https://alexkirp.github.io/PUMP-QB80-07.jpg" alt="Image Product" loading="lazy" />
+    </div>
+  </div>
+
+
+
+  <!-- Aligned Two-Column Container -->
+  <div class="container">
+    
+    <!-- Row 1 -->
+      <div class="row">
+        <!-- card 1 -->
+        <div class="card order-sm-1">
+          <div class="product-header">
+            <h3>IMAGE 01 LEFT </h3>
+            <div class="sm-img">
+              <img src="https://picsum.photos/800/400?random=5" alt="Image Product" loading="lazy" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h3>DESCRIPTION LEFT</h3>
+        
+            <div class="desc">
+              <p>
+                This is Product 1. It contains important information about the
+                product and its features. This product is one of the best sellers
+                in the market. It offers high durability, excellent performance,
+                and a sleek design that fits into any modern environment.
+                Customers appreciate the reliability of this product as it
+                consistently delivers top-notch results. It has been tested and
+                approved by industry professionals to ensure quality standards are
+                met. This is Product 1. It contains important information about the
+                product and its features. This product is one of the best sellers
+                in the market. It offers high durability, excellent performance,
+                and a sleek design that fits into any modern environment.
+                Customers appreciate the reliability of this product as it
+                consistently delivers top-notch results. It has been tested and
+                approved by industry professionals to ensure quality standards are
+                met.
+        
+        
+              </p>
+            </div>
+          </div>
+          <div class="product-specification">
+            <h3>SPECIFICATIONS LEFT</h3>
+        
+            <div class="desc">
+              <ul class="striped-list">
+                <li>Striped list High durability and excellent performance</li>
+                <li>Striped list Energy-efficient technology</li>
+                <li>Striped list Premium materials for long-term usability</li>
+                <li>Striped list User-friendly and easy to maintain</li>
+                <li>Striped List Impressive warranty options</li>
+                <li>Striped list High durability and excellent performance</li>
+                <li>Striped list Energy-efficient technology</li>
+                <li>Striped list Premium materials for long-term usability</li>
+                <li>Striped list User-friendly and easy to maintain</li>
+                <li>Striped List Impressive warranty options</li>
+                <li>Striped list High durability and excellent performance</li>
+                <li>Striped list Energy-efficient technology</li>
+                <li>Striped list Premium materials for long-term usability</li>
+                <li>Striped list User-friendly and easy to maintain</li>
+                <li>Striped List Impressive warranty options</li>
+                <li>Striped list High durability and excellent performance</li>
+                <li>Striped list Energy-efficient technology</li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- END OF LEFT COLUMN-->
+        
+        <!-- card 2 -->
+        <div class="card order-sm-3">
+          <div class="product-header">
+            <h3>IMAGE 01 RIGHT</h3>
+            <div class="sm-img">
+              <img src="https://picsum.photos/800/400?random=8" alt="Image Product" loading="lazy" />
+            </div>
+          </div>
+          <div class="product-description">
+            <h3>FEATURES RIGHT</h3>
+        
+            <div class="desc">
+              <ul>
+                <li> Bullet One -- High durability and excellent performance</li>
+                <li> Bullet Two -- Energy-efficient technology</li>
+                <li> Bullet Three --Premium materials for long-term usability</li>
+                <li> Bullet Four --User-friendly and easy to maintain</li>
+                <li> Bullet Five --Impressive warranty options</li>
+                <li> Bullet One -- High durability and excellent performance</li>
+                <li> Bullet Two -- Energy-efficient technology</li>
+                <li> Bullet Three --Premium materials for long-term usability</li>
+                <li> Bullet Four --User-friendly and easy to maintain</li>
+                <li> Bullet Five --Impressive warranty options</li>
+                <li> Bullet One -- High durability and excellent performance</li>
+                <li> Bullet Two -- Energy-efficient technology</li>
+                <li> Bullet Three --Premium materials for long-term usability</li>
+                <li> Bullet Four --User-friendly and easy to maintain</li>
+                <li> Bullet Five --Impressive warranty options</li>
+                <li> Bullet One -- High durability and excellent performance</li>
+                <li> Bullet Two -- Energy-efficient technology</li>
+                <li> Bullet Three --Premium materials for long-term usability</li>
+                <li> Bullet Four --User-friendly and easy to maintain</li>
+                <li> Bullet Five --Impressive warranty options</li>
+        
+              </ul>
+            </div>
+          </div>
+          <div class="product-specification">
+            <h3>PACKAGE CONTENT RIGHT</h3>
+            <div class="desc">
+              <ul>
+                <li> Bullet One -- package content High durability and excellent performance</li>
+                <li> Bullet Two -- package content Energy-efficient technology</li>
+                <li> Bullet Three -- package content Premium materials for long-term usability</li>
+                <li> Bullet Four -- package content User-friendly and easy to maintain</li>
+                <li> Bullet Five --package content Impressive warranty options</li>
+                <li> Bullet One -- package content High durability and excellent performance</li>
+                <li> Bullet Two -- package content Energy-efficient technology</li>
+                <li> Bullet Three --package content Premium materials for long-term usability</li>
+                <li> Bullet Four --package content User-friendly and easy to maintain</li>
+                <li> Bullet Five --package content Impressive warranty options</li>
+            </div>
+          </div>
+        </div> <!-- END OF RIGHT COLUMN-->
+
+        <!-- card 3 -->
+        <div class="card order-sm-2">
+        
+          <div class="product-description">
+            <h3>WARRANTY LEFT</h3>
+        
+            <div class="desc">
+              <p>
+                This is Product 1. It contains important information about the
+                product and its features. This product is one of the best sellers
+                in the market. It offers high durability, excellent performance,
+                and a sleek design that fits into any modern environment.
+                Customers appreciate the reliability of this product as it
+                consistently delivers top-notch results. It has been tested and
+                approved by industry professionals to ensure quality standards are
+                met. This is Product 1. It contains important information about the
+                product and its features. This product is one of the best sellers
+                in the market. It offers high durability, excellent performance,
+                and a sleek design that fits into any modern environment.
+                Customers appreciate the reliability of this product as it
+                consistently delivers top-notch results. It has been tested and
+                approved by industry professionals to ensure quality standards are
+                met.
+        
+        
+              </p>
+            </div>
+          </div>
+          <div class="product-specification">
+            <h3>SHIPPING LEFT</h3>
+        
+            <div class="desc">
+              <ul class="striped-list">
+                <li>Striped list High durability and excellent performance</li>
+                <li>Striped list Energy-efficient technology</li>
+                <li>Striped list Premium materials for long-term usability</li>
+                <li>Striped list User-friendly and easy to maintain</li>
+                <li>Striped List Impressive warranty options</li>
+                <li>Striped list High durability and excellent performance</li>
+                <li>Striped list Energy-efficient technology</li>
+                <li>Striped list Premium materials for long-term usability</li>
+                <li>Striped list User-friendly and easy to maintain</li>
+                <li>Striped List Impressive warranty options</li>
+                <li>Striped list High durability and excellent performance</li>
+                <li>Striped list Energy-efficient technology</li>
+                <li>Striped list Premium materials for long-term usability</li>
+                <li>Striped list User-friendly and easy to maintain</li>
+                <li>Striped List Impressive warranty options</li>
+                <li>Striped list High durability and excellent performance</li>
+                <li>Striped list Energy-efficient technology</li>
+              </ul>
+            </div>
+          </div>
+        </div> <!-- END OF LEFT COLUMN-->
+        
+        <!-- card 4 -->
+        <div class="card order-sm-4">
+        
+          <div class="product-description">
+            <h3>PAYMENT RIGHT</h3>
+        
+            <div class="desc">
+              <p>
+                <br>
+                Additionally, Product 1 has received numerous positive reviews from
+                satisfied customers. Many highlight its user-friendly nature, ease
+                of maintenance, and impressive warranty options. Whether for
+                personal or professional use, this product is designed to cater to
+                different needs, making it a valuable investment.
+              </p>
+            </div>
+          </div>
+          <div class="product-specification">
+            <h3>PACKAGE CONTENT LEFT</h3>
+            <div class="desc">
+              <p>
+                <br>
+                Additionally, Product 1 has received numerous positive reviews from
+                satisfied customers. Many highlight its user-friendly nature, ease
+                of maintenance, and impressive warranty options. Whether for
+                personal or professional use, this product is designed to cater to
+                different needs, making it a valuable investment.
+              </p>
+            </div>
+          </div>
+        </div> <!-- END OF RIGHT COLUMN-->
+
+      </div>
+   
+  </div>
+
+
+
+  <!-- PART 2 ---------------------------2PART @---------------- -->
+
+  <div class="container">
+    <div>
+      <h2>BREAK POINT BREAK POINT BREAK POINT BREAK POINT BREAK POINT BREAK POINTBREAK POINT BREAK POINT BREAK
+        POINTBREAK POINT BREAK POINT BREAK POINTBREAK POINT B</h2>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="">
+      <h2>Image Product 3</h2>
+      <div class="large-img">
+        <img src="https://picsum.photos/800/400?random=11" alt="Image Product" loading="lazy" />
+      </div>
+      <div class="desc">
+        <p>
+          <br>
+          Additionally, Product 1 has received numerous positive reviews from
+          satisfied customers. Many highlight its user-friendly nature, ease
+          of maintenance, and impressive warranty options. Whether for
+          personal or professional use, this product is designed to cater to
+          different needs, making it a valuable investment.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
